@@ -1,0 +1,11 @@
+file file file
+FILE file
+FILE
+
+FILE
+CASE
+case
+1234
+-
+
+-i FILE
