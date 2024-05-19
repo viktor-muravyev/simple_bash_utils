@@ -119,6 +119,7 @@ void add_patterns_from_file(char *grep_patterns, char *file_name) {
   file = fopen(file_name, "r");
   if (file != NULL) {
     while (fgets(buffer, 4096, file) != NULL) {
+      if (*buffer == '\n') continue;
       size_t n = strlen(buffer);
       if (buffer[n - 1] == '\n') buffer[n - 1] = '\0';
       add_new_patterns(grep_patterns, buffer);
